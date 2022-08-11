@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/corner"
+            android:drawableStart="@drawable/ic_baseline_drafts_24"
+            android:paddingStart="12dp"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:id="@+id/edit_theme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/corner"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:drawableStart="@drawable/ic_baseline_subject_24"
+            android:paddingLeft="12dp"
+             />
+        <EditText
+            android:id="@+id/edit_massage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/corner"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:drawableStart="@drawable/ic_baseline_message_24"
+            android:paddingLeft="12dp"
+            />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/blue"
+        android:textSize="20dp"
+        android:text="Send"
+
+        app:layout_constraintTop_toBottomOf="@id/container"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/blue"
+        android:textSize="20dp"
+        android:text="Next"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_send"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>
